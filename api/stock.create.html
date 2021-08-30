@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content=""../assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>MicroBase · eCommerce made simple</title>
+
+  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../assets/css/overwrites.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/fonts/pictoicons/css/picto.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/tomorrow.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-88562993-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+
+<body class="white">
+
+<!-- Fixed navbar -->
+<div class="header navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://microbase.io"><img
+          src="../assets/img/logo.png" alt="MICRO-BASE"/></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://docs.microbase.io">See the docs <strong style="margin-left:5px"><i class="fa fa-book" style="color: #00aced"></i></strong> &gt;</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+<div class="page-content">
+  <div class="container">
+    <nav class="col-xs-3">
+      <ul>
+        <li><a href="../index.html">Overview</a></li>
+      </ul>
+      <ul>
+        <li><a href="../services/ecomm-setup.html">Setup</a></li>
+      </ul>
+      <ul>
+        <li><a href="../services/base-examples.html">Examples</a></li>
+      </ul>
+      <ul>
+        <li><a href="../services/fakeData.html">Fake Data</a></li>
+      </ul>
+      ________________________
+      <h3>stock.create TOC</h3><ul>
+  <li><a href="#stock-create">stock.create</a></li>
+  <li><a href="#arguments">Arguments</a></li>
+  <li><a href="#response">Response</a></li>
+  <li><a href="#errors">Errors</a></li>
+  <li><a href="#example">Example</a></li>
+</ul>      ________________________
+
+      <h3>Services</h3>
+      <ul>
+        <li><a href="../services/micro-cart-service.html">Cart</a></li>
+        <li><a href="../services/micro-catalog-service.html">Catalog</a></li>
+        <li><a href="../services/micro-customer-service.html">Customer</a></li>
+        <li><a href="../services/micro-oauth-service.html">Oauth</a></li>
+        <li><a href="../services/micro-payment-service.html">Payment</a></li>
+        <li><a href="../services/micro-promotion-service.html">Promotion</a></li>
+        <li><a href="../services/micro-recommendation-service.html">Recommendation</a></li>
+        <li><a href="../services/micro-stock-service.html">Stock</a></li>
+        <li><a href="../services/micro-tax-service.html">Tax</a></li>
+      </ul>
+      <h3>API</h3>
+      <ul>
+        <li><a href="calling-conventions.html">Calling conventions</a>
+          
+        <li><a href="cart.addToCart.html">cart.addToCart</a>
+          <a href="v1/cart.addToCart.html">[v1]</a>
+        <li><a href="cart.calculateCart.html">cart.calculateCart</a>
+          <a href="v1/cart.calculateCart.html">[v1]</a>
+        <li><a href="cart.checkout.html">cart.checkout</a>
+          <a href="v1/cart.checkout.html">[v1]</a>
+        <li><a href="cart.create.html">cart.create</a>
+          <a href="v1/cart.create.html">[v1]</a>
+        <li><a href="cart.info.html">cart.info</a>
+          <a href="v1/cart.info.html">[v1]</a>
+        <li><a href="cart.list.html">cart.list</a>
+          
+        <li><a href="cart.removeFromCart.html">cart.removeFromCart</a>
+          <a href="v1/cart.removeFromCart.html">[v1]</a>
+        <li><a href="cart.setBillingAddress.html">cart.setBillingAddress</a>
+          <a href="v1/cart.setBillingAddress.html">[v1]</a>
+        <li><a href="cart.setPaymentGateway.html">cart.setPaymentGateway</a>
+          <a href="v1/cart.setPaymentGateway.html">[v1]</a>
+        <li><a href="cart.setShippingAddress.html">cart.setShippingAddress</a>
+          <a href="v1/cart.setShippingAddress.html">[v1]</a>
+        <li><a href="cart.setShippingMethod.html">cart.setShippingMethod</a>
+          <a href="v1/cart.setShippingMethod.html">[v1]</a>
+        <li><a href="category.create.html">category.create</a>
+          <a href="v1/category.create.html">[v1]</a>
+        <li><a href="category.info.html">category.info</a>
+          <a href="v1/category.info.html">[v1]</a>
+        <li><a href="category.list.html">category.list</a>
+          <a href="v1/category.list.html">[v1]</a>
+        <li><a href="category.remove.html">category.remove</a>
+          <a href="v1/category.remove.html">[v1]</a>
+        <li><a href="category.update.html">category.update</a>
+          <a href="v1/category.update.html">[v1]</a>
+        <li><a href="customer.address.create.html">customer.address.create</a>
+          
+        <li><a href="customer.address.info.html">customer.address.info</a>
+          
+        <li><a href="customer.address.remove.html">customer.address.remove</a>
+          
+        <li><a href="customer.address.update.html">customer.address.update</a>
+          
+        <li><a href="customer.checkCredentials.html">customer.checkCredentials</a>
+          
+        <li><a href="customer.create.html">customer.create</a>
+          
+        <li><a href="customer.info.html">customer.info</a>
+          
+        <li><a href="customer.list.html">customer.list</a>
+          
+        <li><a href="customer.remove.html">customer.remove</a>
+          
+        <li><a href="customer.update.html">customer.update</a>
+          
+        <li><a href="payment.authorize.html">payment.authorize</a>
+          
+        <li><a href="payment.capture.html">payment.capture</a>
+          
+        <li><a href="payment.create.html">payment.create</a>
+          
+        <li><a href="payment.info.html">payment.info</a>
+          
+        <li><a href="payment.list.html">payment.list</a>
+          
+        <li><a href="payment.purchase.html">payment.purchase</a>
+          
+        <li><a href="payment.remove.html">payment.remove</a>
+          
+        <li><a href="payment.token.html">payment.token</a>
+          
+        <li><a href="payment.update.html">payment.update</a>
+          
+        <li><a href="product.create.html">product.create</a>
+          <a href="v1/product.create.html">[v1]</a>
+        <li><a href="product.info.html">product.info</a>
+          <a href="v1/product.info.html">[v1]</a>
+        <li><a href="product.list.html">product.list</a>
+          <a href="v1/product.list.html">[v1]</a>
+        <li><a href="product.remove.html">product.remove</a>
+          <a href="v1/product.remove.html">[v1]</a>
+        <li><a href="product.update.html">product.update</a>
+          <a href="v1/product.update.html">[v1]</a>
+        <li><a href="promotion.cartPromotions.html">promotion.cartPromotions</a>
+          <a href="v1/promotion.cartPromotions.html">[v1]</a>
+        <li><a href="promotion.create.html">promotion.create</a>
+          <a href="v1/promotion.create.html">[v1]</a>
+        <li><a href="promotion.remove.html">promotion.remove</a>
+          <a href="v1/promotion.remove.html">[v1]</a>
+        <li><a href="recommendation.alsoviewed.html">recommendation.alsoviewed</a>
+          
+        <li><a href="shipping.create.html">shipping.create</a>
+          
+        <li><a href="shipping.getShippingMethods.html">shipping.getShippingMethods</a>
+          
+        <li><a href="shipping.info.html">shipping.info</a>
+          
+        <li><a href="shipping.remove.html">shipping.remove</a>
+          
+        <li><a href="stock.create.html">stock.create</a>
+          
+        <li><a href="stock.info.html">stock.info</a>
+          
+        <li><a href="stock.remove.html">stock.remove</a>
+          
+        <li><a href="stock.reserve.html">stock.reserve</a>
+          
+        <li><a href="stock.reserve.renew.html">stock.reserve.renew</a>
+          
+        <li><a href="stock.unreserve.html">stock.unreserve</a>
+          
+        <li><a href="stock.update.html">stock.update</a>
+          
+        <li><a href="tax.cartTaxes.html">tax.cartTaxes</a>
+          <a href="v1/tax.cartTaxes.html">[v1]</a>
+        <li><a href="tax.create.html">tax.create</a>
+          <a href="v1/tax.create.html">[v1]</a>
+        <li><a href="tax.info.html">tax.info</a>
+          <a href="v1/tax.info.html">[v1]</a>
+        <li><a href="tax.list.html">tax.list</a>
+          <a href="v1/tax.list.html">[v1]</a>
+        <li><a href="tax.remove.html">tax.remove</a>
+          <a href="v1/tax.remove.html">[v1]</a>
+        <li><a href="tax.update.html">tax.update</a>
+          <a href="v1/tax.update.html">[v1]</a>
+      </ul>
+      <h3>Base Modules</h3>
+      <ul>
+        <li><a href="../modules/admin.html">Admin</a></li>
+        <li><a href="../modules/bus.html">Bus</a></li>
+        <li><a href="../modules/cache.html">Cache</a></li>
+        <li><a href="../modules/config.html">Config</a></li>
+        <li><a href="../modules/db.html">DB</a></li>
+        <li><a href="../modules/impex.html">Impex</a></li>
+        <li><a href="../modules/logger.html">Logger</a></li>
+        <li><a href="../modules/logstash.html">Logstash</a></li>
+        <li><a href="../modules/migrations.html">Migrations</a></li>
+        <li><a href="../modules/probes.html">Probes</a></li>
+        <li><a href="../modules/search.html">Search</a></li>
+        <li><a href="../modules/services.html">Services</a></li>
+        <li><a href="../modules/tokens.html">Tokens</a></li>
+        <li><a href="../modules/transports.html">Transports</a></li>
+        <li><a href="../modules/utils.html">Utils</a></li>
+        <li><a href="../modules/workers.html">Workers</a></li>
+      </ul>
+    </nav>
+    <div class="col-xs-9"><h1 id="stock-create">stock.create</h1>
+<p>This method is used to create a Stock.</p>
+<h1 id="arguments">Arguments</h1>
+<p>This method has the path <code>/catalog/&lt;version&gt;/stock.create</code> and 
+follows the <a href="./calling-conventions.html">MicroBase API calling conventions</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Required</th>
+<th>Type</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>productId</td>
+<td>yes</td>
+<td>String</td>
+<td>HJ4g4fACrH</td>
+<td>The Product identifier.</td>
+</tr>
+<tr>
+<td>warehouseId</td>
+<td>yes</td>
+<td>String</td>
+<td>001</td>
+<td>The warehouse identifier.</td>
+</tr>
+<tr>
+<td>quantityInStock</td>
+<td>yes</td>
+<td>Number</td>
+<td>100</td>
+<td>The quantity currently in stock for this Product.</td>
+</tr>
+<tr>
+<td>quantityReserved</td>
+<td>yes</td>
+<td>Number</td>
+<td>0</td>
+<td>The quantity currently reserved of this Product.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="response">Response</h1>
+<p>Returns a Stock object:</p>
+<pre class="hljs"><code>{
+    <span class="hljs-string">"ok"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"stock"</span>: {
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"BkKu-nuu"</span>,
+        <span class="hljs-string">"productId"</span>: <span class="hljs-string">"HJ4g4fACrH"</span>,
+        <span class="hljs-string">"warehouseId"</span>: <span class="hljs-string">"001"</span>,
+        <span class="hljs-string">"quantityInStock"</span>: <span class="hljs-number">100</span>,
+        <span class="hljs-string">"quantityReserved"</span>: <span class="hljs-number">0</span>
+    }
+}</code></pre><h1 id="errors">Errors</h1>
+<p>Expected errors that this method could return. Some errors return additional data.</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>duplicate_key</td>
+<td>Index name and data causing the error</td>
+<td>Some unique key violation</td>
+</tr>
+<tr>
+<td>validation_error</td>
+<td>The data causing the error</td>
+<td>Some validation error</td>
+</tr>
+</tbody>
+</table>
+<h1 id="example">Example</h1>
+<pre class="hljs"><code>curl --request POST \
+  --url http://localhost:3000/services/catalog/v1/stock.create \
+  --header <span class="hljs-string">'authorization: Bearer xxxxx...'</span> \
+  --header <span class="hljs-string">'accept: application/json'</span> \
+  --header <span class="hljs-string">'content-type: application/json'</span> \
+  --data <span class="hljs-string">'{"productId": "HJ4g4fACrH", "warehouseId": "001", \
+           "quantityInStock": 100, "quantityReserved": 0}'</span></code></pre>    </div>
+  </div>
+</div>
+
+
+<div class="footer container">
+  <p class="centered">&copy; MicroBase <?php echo date("Y"); ?></p>
+</div><!-- /container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- highlightjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

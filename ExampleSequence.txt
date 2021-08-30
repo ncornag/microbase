@@ -1,0 +1,23 @@
+# From https://www.websequencediagrams.com/
+# https://www.websequencediagrams.com/cgi-bin/cdraw?lz=IyBGcm9tIGh0dHBzOi8vd3d3LndlYnNlcXVlbmNlZGlhZ3JhbXMuY29tLwp0aXRsZSBCb290c3RyYXAgUwAfBwoKcGFydGljaXBhbnQgVXNlcgAEDUdhdGV3YXkAGA1SZWdpc3RyAAcOQ2FydCBTZXJ2aWNlAEYNU3RvY2sAEQkKAAINLT4ARAg6AE8HZXIKAFcILT4Adgc6IFVwZGF0ZSBDb25maWcKAF8MAAw2VXNlcgBUC0FkZCBQcm9kdWN0IFJlcXVlc3QKAIFyBy0-AIFNDDogUm91dGVkAB0VAIEJDgCBMwlDaGVjawCBfwcATBEAghANAFUJAB8UAIIpDwCCEgkAglkGQXZhaWxhYmlsaXR5IFJlc3BvbnNlAIEsGAAXHACCTg4AgW4OAIIcCwCBVRgAgjwOAHcQVXNlcgANFw&s=napkin
+title Bootstrap Sequence
+
+participant User
+participant Gateway
+participant Registry
+participant Cart Service
+participant Stock Service
+
+Stock Service->Registry: Register
+Registry->Gateway: Update Config
+Cart Service->Registry: Register
+Registry->Gateway: Update Config
+User->Gateway: Add Product Request
+Gateway->Cart Service: Routed Add Product Request
+Cart Service->Gateway: Check Stock Request
+Gateway->Stock Service: Routed Check Stock Request
+Stock Service->Gateway: Stock Availability Response
+Gateway->Cart Service: Stock Availability Response
+Cart Service->Cart Service: Add Product
+Cart Service->Gateway: Add Product Response
+Gateway->User: Add Product Response

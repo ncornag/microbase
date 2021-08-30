@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets//favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets//favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets//favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets//favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets//favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets//favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets//favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets//favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets//favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets//favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets//favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets//favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets//favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets//favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content=""../assets//favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>MicroBase · eCommerce made simple</title>
+
+  <link href="../assets//css/bootstrap.css" rel="stylesheet">
+  <link href="../assets//css/overwrites.css" rel="stylesheet">
+  <link href="../assets//css/main.css" rel="stylesheet">
+  <link href="../assets//fonts/pictoicons/css/picto.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/tomorrow.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-88562993-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+
+<body class="white">
+
+<!-- Fixed navbar -->
+<div class="header navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://microbase.io"><img
+          src="../assets//img/logo.png" alt="MICRO-BASE"/></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://docs.microbase.io">See the docs <strong style="margin-left:5px"><i class="fa fa-book" style="color: #00aced"></i></strong> &gt;</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+<div class="page-content">
+  <div class="container">
+    <nav class="col-xs-3">
+      <ul>
+        <li><a href="../index.html">Overview</a></li>
+      </ul>
+      <ul>
+        <li><a href="ecomm-setup.html">Setup</a></li>
+      </ul>
+      <ul>
+        <li><a href="base-examples.html">Examples</a></li>
+      </ul>
+      <ul>
+        <li><a href="fakeData.html">Fake Data</a></li>
+      </ul>
+      ________________________
+      <h3>Promotion Service TOC</h3><ul>
+  <li><a href="#promotion-service">Promotion Service</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#appendix-i-special-promotion-types-and-cases">Appendix I: Special promotion types and cases</a></li>
+</ul>      ________________________
+
+      <h3>Services</h3>
+      <ul>
+        <li><a href="micro-cart-service.html">Cart</a></li>
+        <li><a href="micro-catalog-service.html">Catalog</a></li>
+        <li><a href="micro-customer-service.html">Customer</a></li>
+        <li><a href="micro-oauth-service.html">Oauth</a></li>
+        <li><a href="micro-payment-service.html">Payment</a></li>
+        <li><a href="micro-promotion-service.html">Promotion</a></li>
+        <li><a href="micro-recommendation-service.html">Recommendation</a></li>
+        <li><a href="micro-stock-service.html">Stock</a></li>
+        <li><a href="micro-tax-service.html">Tax</a></li>
+      </ul>
+      <h3>API</h3>
+      <ul>
+        <li><a href="../api/calling-conventions.html">Calling conventions</a>
+          
+        <li><a href="../api/cart.addToCart.html">cart.addToCart</a>
+          <a href="../api/v1/cart.addToCart.html">[v1]</a>
+        <li><a href="../api/cart.calculateCart.html">cart.calculateCart</a>
+          <a href="../api/v1/cart.calculateCart.html">[v1]</a>
+        <li><a href="../api/cart.checkout.html">cart.checkout</a>
+          <a href="../api/v1/cart.checkout.html">[v1]</a>
+        <li><a href="../api/cart.create.html">cart.create</a>
+          <a href="../api/v1/cart.create.html">[v1]</a>
+        <li><a href="../api/cart.info.html">cart.info</a>
+          <a href="../api/v1/cart.info.html">[v1]</a>
+        <li><a href="../api/cart.list.html">cart.list</a>
+          
+        <li><a href="../api/cart.removeFromCart.html">cart.removeFromCart</a>
+          <a href="../api/v1/cart.removeFromCart.html">[v1]</a>
+        <li><a href="../api/cart.setBillingAddress.html">cart.setBillingAddress</a>
+          <a href="../api/v1/cart.setBillingAddress.html">[v1]</a>
+        <li><a href="../api/cart.setPaymentGateway.html">cart.setPaymentGateway</a>
+          <a href="../api/v1/cart.setPaymentGateway.html">[v1]</a>
+        <li><a href="../api/cart.setShippingAddress.html">cart.setShippingAddress</a>
+          <a href="../api/v1/cart.setShippingAddress.html">[v1]</a>
+        <li><a href="../api/cart.setShippingMethod.html">cart.setShippingMethod</a>
+          <a href="../api/v1/cart.setShippingMethod.html">[v1]</a>
+        <li><a href="../api/category.create.html">category.create</a>
+          <a href="../api/v1/category.create.html">[v1]</a>
+        <li><a href="../api/category.info.html">category.info</a>
+          <a href="../api/v1/category.info.html">[v1]</a>
+        <li><a href="../api/category.list.html">category.list</a>
+          <a href="../api/v1/category.list.html">[v1]</a>
+        <li><a href="../api/category.remove.html">category.remove</a>
+          <a href="../api/v1/category.remove.html">[v1]</a>
+        <li><a href="../api/category.update.html">category.update</a>
+          <a href="../api/v1/category.update.html">[v1]</a>
+        <li><a href="../api/customer.address.create.html">customer.address.create</a>
+          
+        <li><a href="../api/customer.address.info.html">customer.address.info</a>
+          
+        <li><a href="../api/customer.address.remove.html">customer.address.remove</a>
+          
+        <li><a href="../api/customer.address.update.html">customer.address.update</a>
+          
+        <li><a href="../api/customer.checkCredentials.html">customer.checkCredentials</a>
+          
+        <li><a href="../api/customer.create.html">customer.create</a>
+          
+        <li><a href="../api/customer.info.html">customer.info</a>
+          
+        <li><a href="../api/customer.list.html">customer.list</a>
+          
+        <li><a href="../api/customer.remove.html">customer.remove</a>
+          
+        <li><a href="../api/customer.update.html">customer.update</a>
+          
+        <li><a href="../api/payment.authorize.html">payment.authorize</a>
+          
+        <li><a href="../api/payment.capture.html">payment.capture</a>
+          
+        <li><a href="../api/payment.create.html">payment.create</a>
+          
+        <li><a href="../api/payment.info.html">payment.info</a>
+          
+        <li><a href="../api/payment.list.html">payment.list</a>
+          
+        <li><a href="../api/payment.purchase.html">payment.purchase</a>
+          
+        <li><a href="../api/payment.remove.html">payment.remove</a>
+          
+        <li><a href="../api/payment.token.html">payment.token</a>
+          
+        <li><a href="../api/payment.update.html">payment.update</a>
+          
+        <li><a href="../api/product.create.html">product.create</a>
+          <a href="../api/v1/product.create.html">[v1]</a>
+        <li><a href="../api/product.info.html">product.info</a>
+          <a href="../api/v1/product.info.html">[v1]</a>
+        <li><a href="../api/product.list.html">product.list</a>
+          <a href="../api/v1/product.list.html">[v1]</a>
+        <li><a href="../api/product.remove.html">product.remove</a>
+          <a href="../api/v1/product.remove.html">[v1]</a>
+        <li><a href="../api/product.update.html">product.update</a>
+          <a href="../api/v1/product.update.html">[v1]</a>
+        <li><a href="../api/promotion.cartPromotions.html">promotion.cartPromotions</a>
+          <a href="../api/v1/promotion.cartPromotions.html">[v1]</a>
+        <li><a href="../api/promotion.create.html">promotion.create</a>
+          <a href="../api/v1/promotion.create.html">[v1]</a>
+        <li><a href="../api/promotion.remove.html">promotion.remove</a>
+          <a href="../api/v1/promotion.remove.html">[v1]</a>
+        <li><a href="../api/recommendation.alsoviewed.html">recommendation.alsoviewed</a>
+          
+        <li><a href="../api/shipping.create.html">shipping.create</a>
+          
+        <li><a href="../api/shipping.getShippingMethods.html">shipping.getShippingMethods</a>
+          
+        <li><a href="../api/shipping.info.html">shipping.info</a>
+          
+        <li><a href="../api/shipping.remove.html">shipping.remove</a>
+          
+        <li><a href="../api/stock.create.html">stock.create</a>
+          
+        <li><a href="../api/stock.info.html">stock.info</a>
+          
+        <li><a href="../api/stock.remove.html">stock.remove</a>
+          
+        <li><a href="../api/stock.reserve.html">stock.reserve</a>
+          
+        <li><a href="../api/stock.reserve.renew.html">stock.reserve.renew</a>
+          
+        <li><a href="../api/stock.unreserve.html">stock.unreserve</a>
+          
+        <li><a href="../api/stock.update.html">stock.update</a>
+          
+        <li><a href="../api/tax.cartTaxes.html">tax.cartTaxes</a>
+          <a href="../api/v1/tax.cartTaxes.html">[v1]</a>
+        <li><a href="../api/tax.create.html">tax.create</a>
+          <a href="../api/v1/tax.create.html">[v1]</a>
+        <li><a href="../api/tax.info.html">tax.info</a>
+          <a href="../api/v1/tax.info.html">[v1]</a>
+        <li><a href="../api/tax.list.html">tax.list</a>
+          <a href="../api/v1/tax.list.html">[v1]</a>
+        <li><a href="../api/tax.remove.html">tax.remove</a>
+          <a href="../api/v1/tax.remove.html">[v1]</a>
+        <li><a href="../api/tax.update.html">tax.update</a>
+          <a href="../api/v1/tax.update.html">[v1]</a>
+      </ul>
+      <h3>Base Modules</h3>
+      <ul>
+        <li><a href="../modules/admin.html">Admin</a></li>
+        <li><a href="../modules/bus.html">Bus</a></li>
+        <li><a href="../modules/cache.html">Cache</a></li>
+        <li><a href="../modules/config.html">Config</a></li>
+        <li><a href="../modules/db.html">DB</a></li>
+        <li><a href="../modules/impex.html">Impex</a></li>
+        <li><a href="../modules/logger.html">Logger</a></li>
+        <li><a href="../modules/logstash.html">Logstash</a></li>
+        <li><a href="../modules/migrations.html">Migrations</a></li>
+        <li><a href="../modules/probes.html">Probes</a></li>
+        <li><a href="../modules/search.html">Search</a></li>
+        <li><a href="../modules/services.html">Services</a></li>
+        <li><a href="../modules/tokens.html">Tokens</a></li>
+        <li><a href="../modules/transports.html">Transports</a></li>
+        <li><a href="../modules/utils.html">Utils</a></li>
+        <li><a href="../modules/workers.html">Workers</a></li>
+      </ul>
+    </nav>
+    <div class="col-xs-9"><h1 id="promotion-service">Promotion Service</h1>
+<p>Ecommerce Promotion service, part of the <a href="http://microbase.io">microbase</a> ecosystem.</p>
+<h1 id="features">Features</h1>
+<ul class="list">
+<li>Multiple promotions firing per cart</li>
+<li>Per Product, Product Category, Order or User data firing</li>
+<li>DSL to allow complex conditions, with &quot;ALL&quot; and/or &quot;ANY&quot; nested conditions</li>
+<li>Almost fullfilled promotion detection with optional thresholds</li>
+<li>Easily creation of custom firing conditions</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>Promotions module aims to help companies gain new customers. It consists of //TODO complete introduction</p>
+<h2 id="promotion-types">Promotion Types</h2>
+<p>Promotions are classified in two main groups: <strong>Product promotions</strong> and <strong>Order promotions</strong></p>
+<h3 id="product-promotions">Product promotions</h3>
+<p>Product promotions triggers depend on products from a cart or order.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Promotion</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1</td>
+<td>Bundle</td>
+<td>Purchase one of each product from a defined set for a combined total price.</td>
+<td>Buy A, B, and C for €50</td>
+</tr>
+<tr>
+<td> 2</td>
+<td>Buy X get Y free</td>
+<td>Purchase a certain number of products from within a defined set and add further products from the same set at no additional cost.</td>
+<td>Buy one get one free.</td>
+</tr>
+<tr>
+<td> 3</td>
+<td>Fixed price</td>
+<td>Purchase from within a defined set at a fixed unit price.</td>
+<td>All shirts €5 each.</td>
+</tr>
+<tr>
+<td> 4</td>
+<td>Multi-buy</td>
+<td>Purchase a certain number of products from within a defined set for a fixed price.</td>
+<td>Buy any 3 shirts for €50.</td>
+</tr>
+<tr>
+<td> 5</td>
+<td>Stepped multi-buy</td>
+<td>Purchase a number of products from within a defined set, there are multiple tiers of product quantities and fixed prices.</td>
+<td>Buy any 3 shirts for €50, 5 for €65, and 7 for €75.</td>
+</tr>
+<tr>
+<td> 6</td>
+<td>Perfect partner</td>
+<td>Purchase a certain product from within a defined set and another partner product from a different defined set and pay a fixed price for the partner product.</td>
+<td>Buy a game for €10 with each games console.</td>
+</tr>
+<tr>
+<td> 7</td>
+<td>One-to-one perfect partner bundle</td>
+<td>Purchase a certain product and another defined partner product for a fixed total price. The cart must contain the base product and the partner product to qualify.</td>
+<td>Buy this game and the selected partner accessory together for €25.00.</td>
+</tr>
+<tr>
+<td> 8</td>
+<td>Perfect partner bundle</td>
+<td>Purchase a certain product along with a specified number of products from within a defined set for a combined total price.</td>
+<td>Buy a games console and 3 accessories for €200.</td>
+</tr>
+<tr>
+<td> 9</td>
+<td>Percentage discount</td>
+<td>Receive a percentage discount on all products within a defined set.</td>
+<td>20% off all cameras.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="order-promotions">Order promotions</h3>
+<p>Order promotions triggers depend on the state of the cart or order at any given moment. That is, depends directly on cart attributes.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Promotion</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1</td>
+<td>Order threshold fixed discount</td>
+<td>A fixed value discount is applied to the order when the threshold order value is exceeded.</td>
+<td>Spend over €50 to receive a €3 discount.</td>
+</tr>
+<tr>
+<td> 2</td>
+<td>Order threshold perfect partner</td>
+<td>Purchase a certain product from within a defined set for a fixed price when the threshold order value is exceeded.</td>
+<td>Spend over €50 to get any shirt for €5.</td>
+</tr>
+<tr>
+<td> 3</td>
+<td>Order threshold free gift</td>
+<td>A free gift is added to the order when the threshold order value is exceeded.</td>
+<td>Spend over €50 to receive a free t-shirt.</td>
+</tr>
+<tr>
+<td> 4</td>
+<td>Order threshold free voucher</td>
+<td>A free voucher is given out when the order reaches a certain value.</td>
+<td>Get a free €5 voucher when you spend over €150.00.</td>
+</tr>
+<tr>
+<td> 5</td>
+<td>Order threshold change delivery mode</td>
+<td>A different delivery mode is applied to the order when the threshold order value is exceeded.</td>
+<td>Spend over €10 to get free shipping</td>
+</tr>
+</tbody>
+</table>
+<h2 id="promotion-triggers-evaluation">Promotion triggers evaluation</h2>
+<p>Promotions are evaluated against a cart. From this evaluation, promotions can be resolved <strong>to be fired</strong>, or <strong>to be potentially fired</strong>. In this latter case, promotions that fulfill conditions to be triggered only to a certain extent (not completely), but enough to be interesting for a customer to be informed of the possibility of getting the advantages of the promotion if he buys more products to meet all promo conditions. A single product in a cart could be affected by many potentially fired promotions.</p>
+<p>Promotions have a certainty factor that represents how close they are to be actually fired, being triggered on certainty == 1. The closer to 1, the closer they are to being fired.</p>
+<h2 id="promotion-priority">Promotion priority</h2>
+<p>Promotions are evaluated in order depending on their priority value. This is important as products can only participate on 1 fired promotion from the set of potential promotions.</p>
+<h1 id="appendix-i-special-promotion-types-and-cases">Appendix I: Special promotion types and cases</h1>
+<h3 id="perfect-partner-cheapest-product-percent-discount">Perfect partner cheapest product percent discount</h3>
+<p>In every case to qualify for the discount twice you need to have a perfect pair, meaning 1 qualifying and 1 partner 1 discount.
+2 qualifying and 2 partner 2 discounts.</p>
+<p><strong>Qualifying categories: Men Women - Partner categories: Men Women</strong></p>
+<p><em>Case 1</em></p>
+<p>Cart contains 2 products: 1 men(10$) 1 women(5$) the discount will be taken from the lowest price product of the two, in this case it will be the women&#39;s (5$)</p>
+<p><em>Case 2</em></p>
+<p>Cart contains 3 products: 1 Men (10$) 1 women(12$) &amp; 1 women (15$) the discount will be taken from the lowest price product of the three, in this case it will be the men (10$)</p>
+<p><em>Case 3</em></p>
+<p>Cart contains 4 products: 1Men 20$ 1 Men (10$) 1 women(12$) &amp; 1 women (15$) the discount will be taken from the 2 lowest price products of the 4, in this case it will be the men (10$) &amp; women (12$)</p>
+<p><strong>Qualifying categories: Men - Partner categories: Men</strong></p>
+<p><em>Case 1</em></p>
+<p>Cart contains 2 products: 1 men (5$) &amp; 1 men (10$) the discount will be taken from the lowest price product of the two, in this case it will be the men (5$)</p>
+<p><em>Case 2</em></p>
+<p>Cart contains 3 products: 1 Men (10$) 1 men(12$) &amp; 1 men (15$) the discount will be taken from the lowest price product of the three, in this case it will be the men (10$)</p>
+<p><em>Case 3</em></p>
+<p>Cart contains 4 products: 1 Men 20$ 1 Men (10$) 1 men(12$) &amp; 1 men (15$) the discount will be taken from the 2 lowest price products of the 4, in this case it will be the men (10$) &amp; men (12$)</p>
+<p><strong>Qualifying categories: Men - Partner categories: Women</strong></p>
+<p><em>Case 1</em></p>
+<p>Cart contains 2 products: 1 men (5$) &amp; 1 women (10$) the discount will be taken from the lowest price women product, in this case it will be the women (10$)</p>
+<p><em>Case 2</em></p>
+<p>Cart contains 3 products: 1 men (5$) &amp; 1 women (10$) 1 women (15$) the discount will be taken from the lowest price women product, in this case it will be the women (10$)</p>
+<p><em>Case 3</em></p>
+<p>Cart contains 4 products: 1 Men 20$ 1 Men 25$ 1 women(12$) &amp; 1 women (15$) the discount will be taken from the 2 women&#39;s product , in this case it will be the women (15$) &amp; women (12$)</p>
+<h3 id="perfect-partner-percent-discount">Perfect partner percent discount</h3>
+<p>The same logic will apply for the perfect partner discount however the discount will come off of the highest price qualifying product.</p>
+<h2 id="examples">Examples</h2>
+<p>In the <a href="./docs/promotion-examples.html">examples page</a> there is a compilation of rules and discounts for each of the promotions types mentioned in thei page.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer container">
+  <p class="centered">&copy; MicroBase <?php echo date("Y"); ?></p>
+</div><!-- /container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="../assets//js/bootstrap.min.js"></script>
+<!-- highlightjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

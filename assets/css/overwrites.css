@@ -1,0 +1,27 @@
+.btn-lg {
+  border-radius: 0;
+}
+
+.btn-sm {
+  border-radius: 0;
+}
+
+.btn-xs {
+  border-radius: 0;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  border-radius: 0;
+}
+
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn {
+  border-radius: 0;
+}
